@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#d90d35"><meta name="description" content="Pokédex portátil instalable">
+<link rel="manifest" href="./manifest.json"><link rel="icon" href="./assets/icons/pokedex.svg"><link rel="stylesheet" href="./css/styles.css">
+<title>Pokédex portátil</title></head><body>
+<main class="layout">
+<section class="pokedex">
+<header class="top"><div class="lens"><i></i></div><div class="lights"><b></b><b></b><b></b></div><div class="hinge"></div></header>
+<div class="frame"><div class="screen-head"><b>POKÉDEX</b><span id="status">● MODO DEMO</span></div>
+<section class="screen">
+<div class="scan"></div><div class="heading"><div><small>REGISTRO <span id="number">#001</span></small><h1 id="name">Bulbasaur</h1></div><button id="sound" title="Activar sonido">♫</button></div>
+<div class="stage"><div class="grid"></div><div class="glow"></div><img id="sprite" alt="Pokémon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png"><span id="loading">CARGANDO…</span><small id="counter">001 / 150</small></div>
+<div id="types" class="types"></div>
+<div class="facts"><div><small>ALTURA</small><b id="height">0.7 m</b></div><div><small>PESO</small><b id="weight">6.9 kg</b></div><div><small>HABILIDAD</small><b id="ability">Espesura</b></div></div>
+<div class="stats-title"><span>ESTADÍSTICAS</span><span id="total">BST 318</span></div><div id="stats" class="stats"></div>
+<p id="description" class="description">Registro de demostración. La información real se cargará desde el backend.</p>
+<footer>MONSTER INDEX <span>DATA LINK <i></i></span></footer>
+</section></div>
+<div class="controls"><div class="left-controls"><div class="dpad"><button data-step="-1" class="up">▲</button><button data-step="-1" class="left">◀</button><i></i><button data-step="1" class="right">▶</button><button data-step="1" class="down">▼</button></div><div class="small-buttons"><button id="prev">SELECT ◀</button><button id="next">START ▶</button></div></div><div class="right-controls"><div class="ab"><button id="random">B</button><button id="details">A</button></div><small>A: DETALLES · B: ALEATORIO</small><div class="speaker">▮ ▮ ▮ ▮ ▮</div></div></div>
+<div class="brand">MONSTER INDEX <span>MODEL DX-150</span></div></section>
+<aside class="tools"><div class="title"><span class="ball">●</span><div><h2>Pokédex portátil</h2><small>PRIMERA GENERACIÓN</small></div></div>
+<label for="search">BUSCAR EN LA POKÉDEX</label><div class="search"><span>⌕</span><input id="search" placeholder="Nombre o número…" type="search"><button id="clear">×</button></div><div id="results"></div>
+<button class="wide" id="catalog">Ver los 150 Pokémon</button><button class="wide" id="test-api">Probar conexión API</button>
+<div class="note"><b>● Preparada para tu backend</b><p>Los datos son de demostración. Cambia la URL y las rutas en <code>js/config.js</code> al recibir la API.</p></div>
+<p class="hint">CONTROLES<br><kbd>←</kbd> <kbd>→</kbd> navegar · <kbd>Enter</kbd> detalles · <kbd>R</kbd> aleatorio</p><div id="toast" class="toast"></div></aside></main>
+<dialog id="detail-dialog"><button class="close" id="close-detail">×</button><div id="detail-content"></div></dialog>
+<dialog id="list-dialog"><button class="close" id="close-list">×</button><h2>Los 150 Pokémon</h2><div id="catalog-list" class="catalog-list"></div></dialog>
+<script src="./js/config.js"></script><script src="./js/mock-data.js"></script><script src="./js/api.js"></script><script src="./js/app.js"></script>
+</body></html>

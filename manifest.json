@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "Pokédex portátil",
+  "short_name": "Pokédex",
+  "description": "Explora los primeros 150 Pokémon",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#111922",
+  "theme_color": "#d90d35",
+  "icons": [
+    {
+      "src": "./assets/icons/pokedex-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./assets/icons/pokedex-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
